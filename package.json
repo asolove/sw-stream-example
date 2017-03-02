@@ -1,0 +1,28 @@
+{
+  "name": "sw-stream-example",
+  "version": "1.0.0",
+  "description": "Example site cached client-sude using service worker + streams",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asolove/sw-stream-example.git"
+  },
+  "keywords": [
+    "serviceworker",
+    "stream"
+  ],
+  "author": "Adam Solove <asolove@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asolove/sw-stream-example/issues"
+  },
+  "homepage": "https://github.com/asolove/sw-stream-example#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.0",
+    "express-ejs-layouts": "^2.2.0"
+  }
+}

@@ -1,0 +1,41 @@
+html { background-color: #ccc; }
+
+body {
+  font: 1em/1.3 sans-serif;
+  max-width: 40em;
+  margin: 0px auto;
+  padding: 0px;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+body > * {
+  padding: 20px 40px;
+}
+
+header {
+  background-color: green;
+  color: white;
+  overflow: auto;
+}
+
+.brand {
+  font-size: 1em;
+  color: yellow;
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+nav a:link,
+nav a:visited {
+  color: white;
+  margin-left: 20px;
+}
+
+footer {
+  background-color: green;
+  color: white;
+}
