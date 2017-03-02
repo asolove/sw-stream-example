@@ -16,7 +16,7 @@ self.addEventListener("fetch", function(event) {
   )
 })
 
-// Stolen/lightly adapter from: https://jakearchibald.com/2016/streams-ftw/
+// Stolen/lightly adapted from: https://jakearchibald.com/2016/streams-ftw/
 function stream(request) {
   if(!('ReadableStream' in self)) {
     return Promise.resolve(null)
