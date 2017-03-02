@@ -8,7 +8,7 @@ with a [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service
 ## How does it work?
 
 This very simple site has a layout with a header, then per-page content, and then a footer. The server responds
-to normal requests (to / and /about) with a fully-rendered page. But it will also respond to /header, /footer with
+to normal requests (to `/` and `/about`) with a fully-rendered page. But it will also respond to `/header` and `/footer` with
 their partial contents, and to page paths with the `nolayout` query parameter added with just the page content
 without header or footer.
 
@@ -21,9 +21,9 @@ the footer.
 
 Me too! That's what this small example is for, to work through them.
 
-- [X] We won't know the title until we get the body content. (Fixed: add inline js to the body content to set the title.)
+- [X] We can't know the title, meta tags, body classes etc. for each page when we cache the header. (Fixed: in the body partial, add inline js to set them correctly.)
 - [ ] What about per-page CSS and JS? (Working on this. Presumably you just add them to the inline js in the partial page layout.)
-- [ ] What about http2 server push? (Thinking about this. You can't push all global assets all the time, because many browsers that don't support SW & Streams will get pushed things they already have cached. I think the answer is to not push for full page requests, but to push page-specific assets on requests for a page partial.)
+- [ ] What about http2 server push? (Thinking about this. You can't push all global assets all the time, because many browsers that don't support SW & Streams will get pushed things they already have cached. I think the answer is to not push for full page requests, but to push page-specific assets on requests for a page partial. You could also do smarter things with cookies.)
 
 Really optimizing the offline experience is going to be even harder. The app shell pattern makes it reasonably easy to
 figure out what to pre-cache and what to show when offline. How does that work for a content site?
